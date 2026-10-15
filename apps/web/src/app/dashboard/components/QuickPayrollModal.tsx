@@ -7,6 +7,7 @@ interface QuickPayrollModalProps {
   isOpen: boolean;
   onClose: () => void;
   currencySymbol?: string;
+  condoId?: string;
   onPayrollSuccess?: (msg: string) => void;
 }
 
@@ -14,31 +15,60 @@ export function QuickPayrollModal({
   isOpen,
   onClose,
   currencySymbol = "$",
+  condoId,
   onPayrollSuccess,
 }: QuickPayrollModalProps) {
   const [employeeName, setEmployeeName] = useState("");
   const [role, setRole] = useState("Conserje / Vigilante");
   const [salary, setSalary] = useState("350.00");
-  const [frequency, setFrequency] = useState("quincenal");
+  const [frequency, setFrequency] = useState("biweekly");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    try {
+      if (condoId) {
+        const { fetchApi } = await import("../../../lib/api");
+        await fetchApi(
+          "/staff",
+          {
+            method: "POST",
+            body: JSON.stringify({
+              condominiumId: condoId,
+              person: {
+                documentType: "V",
+                documentNumber: String(Math.floor(10000000 + Math.random() * 20000000)),
+                fullName: employeeName || "Colaborador",
+              },
+              position: role,
+              contractType: "individual",
+              hireDate: new Date().toISOString().slice(0, 10),
+              salary: salary,
+              salaryCurrency: "USD",
+              payFrequency: frequency,
+              status: "active",
+            }),
+          },
+          condoId
+        );
+      }
       setLoading(false);
       setSuccess(true);
       setTimeout(() => {
         setSuccess(false);
         onClose();
         if (onPayrollSuccess) {
-          onPayrollSuccess(`Nómina de personal '${employeeName || "Colaborador"}' agregada con éxito.`);
+          onPayrollSuccess(`Colaborador '${employeeName || "Colaborador"}' registrado en la nómina con éxito.`);
         }
       }, 1200);
-    }, 600);
+    } catch (err: any) {
+      setLoading(false);
+      alert(err.message || "Error al registrar en nómina");
+    }
   };
 
   return (

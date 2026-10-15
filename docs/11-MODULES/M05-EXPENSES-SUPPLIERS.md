@@ -127,9 +127,9 @@ pending → overdue
 - Integración con bancos para pagos automáticos (v2).
 
 ## 12. Criterios de aceptación
-
-- [ ] Se registran gastos por categoría.
-- [ ] Presupuesto genera alerta al superar umbral.
-- [ ] Facturas de proveedor cambian de estado correctamente.
-- [ ] Comisiones bancarias se registran automáticamente.
-- [ ] Reportes exportan correctamente.
+ 
+- [x] Se registran gastos por categoría.
+- [x] Presupuesto genera alerta al superar umbral.
+- [x] Facturas de proveedor cambian de estado correctamente.
+- [x] Comisiones bancarias se registran automáticamente como gasto operativo.
+- [x] Reportes y desglose de flujo de caja (ingresos vs egresos).

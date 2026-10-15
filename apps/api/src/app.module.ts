@@ -7,6 +7,10 @@ import { HealthModule } from "./modules/health/health.module";
 import { IdentityModule } from "./modules/identity/identity.module";
 import { CondominiumsModule } from "./modules/condominiums/condominiums.module";
 import { PropertiesModule } from "./modules/properties/properties.module";
+import { BillingModule } from "./modules/billing/billing.module";
+import { PaymentsModule } from "./modules/payments/payments.module";
+import { ExpensesModule } from "./modules/expenses/expenses.module";
+import { StaffPayrollModule } from "./modules/staff-payroll/staff-payroll.module";
 import { JwtAuthGuard } from "./common/guards/jwt-auth.guard";
 import { PermissionsGuard } from "./common/guards/permissions.guard";
 
@@ -22,6 +26,10 @@ import { PermissionsGuard } from "./common/guards/permissions.guard";
     IdentityModule,
     CondominiumsModule,
     PropertiesModule,
+    BillingModule,
+    PaymentsModule,
+    ExpensesModule,
+    StaffPayrollModule,
   ],
   providers: [
     {

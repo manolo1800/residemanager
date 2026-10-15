@@ -21,3 +21,98 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   min-height: 100vh;
 }
+
+/* ==========================================================================
+   Modern Minimalist Scrollbar Styles
+   - Barra gris claro difuminada y suave tipo píldora
+   - Sin flechas ni botones toscos
+   - Pistas transparentes sin bordes blancos
+   ========================================================================== */
+
+/* Firefox standard */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(203, 213, 225, 0.45) transparent;
+}
+
+/* Chrome, Edge, Safari, Opera (WebKit / Blink) */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Eliminar botones y flechas tradicionales */
+*::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Track completamente transparente, sin bordes */
+*::-webkit-scrollbar-track {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Barra (Thumb) gris claro difuminada / translúcida y redondeada */
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(203, 213, 225, 0.45);
+  border-radius: 9999px;
+  border: none !important;
+  background-clip: padding-box;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover sutil sobre el thumb */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(148, 163, 184, 0.7);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: rgba(100, 116, 139, 0.9);
+}
+
+/* Esquinas de intersección de scroll */
+*::-webkit-scrollbar-corner {
+  background: transparent !important;
+}
+
+/* ==========================================================================
+   Clase de scrollbar moderna para Sidebar y Contenedores Tematizados
+   ========================================================================== */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent !important;
+  border: none !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  border: none !important;
+  transition: background-color 0.2s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+

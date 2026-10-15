@@ -145,10 +145,10 @@ pending → rejected
 
 ## 12. Criterios de aceptación
 
-- [ ] Se crea un trabajador con tipo de contrato.
-- [ ] Se genera contrato PDF por plantilla.
-- [ ] Se registra asistencia diaria sin duplicados.
-- [ ] Se crea período de nómina y calcula neto.
-- [ ] Se genera recibo PDF.
-- [ ] Adelanto se descuenta en nómina según cuotas.
-- [ ] Cierre de período bloquea edición.
+- [x] Se crea un trabajador con tipo de contrato.
+- [x] Se genera contrato PDF por plantilla.
+- [x] Se registra asistencia diaria sin duplicados.
+- [x] Se crea período de nómina y calcula neto.
+- [x] Se genera recibo PDF.
+- [x] Adelanto se descuenta en nómina según cuotas.
+- [x] Cierre de período bloquea edición.

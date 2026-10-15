@@ -34,4 +34,8 @@ export class CondominiumsFacade {
   async getStructuresByCondominium(condominiumId: string, tenantId: string) {
     return this.structureRepo.findByCondo(condominiumId, tenantId);
   }
+
+  async getUnitsByCondominium(condominiumId: string, tenantId: string, filters = {}) {
+    return this.unitRepo.findAll(condominiumId, tenantId, filters);
+  }
 }

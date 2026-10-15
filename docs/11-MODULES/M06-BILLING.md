@@ -130,9 +130,9 @@ pending → cancelled
 
 ## 12. Criterios de aceptación
 
-- [ ] Se genera el cargo mensual para todas las unidades.
-- [ ] El impuesto se aplica según configuración.
-- [ ] La mora se calcula al vencer.
-- [ ] El estado de cuenta refleja cargos y pagos.
-- [ ] El panel de morosidad lista deudores.
-- [ ] Cuota extraordinaria exige acta si está configurado.
+- [x] Se genera el cargo mensual para todas las unidades.
+- [x] El impuesto se aplica según configuración.
+- [x] La mora se calcula al vencer.
+- [x] El estado de cuenta refleja cargos y pagos.
+- [x] El panel de morosidad lista deudores.
+- [x] Cuota extraordinaria exige acta si está configurado.

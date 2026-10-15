@@ -22,10 +22,10 @@ last_updated: 2026-10-12
 | F2 | Estructura física y propiedades | 2 semanas | ✅ |
 | F3 | Residentes y vinculación | 2 semanas | ✅ |
 
-| F4 | Cobranza | 4 semanas | ⏳ |
-| F5 | Pagos, comprobantes, recibos | 3 semanas | ⏳ |
-| F6 | Gastos y proveedores | 2 semanas | ⏳ |
-| F7 | Personal, nómina, asistencia | 4 semanas | ⏳ |
+| F4 | Cobranza | 4 semanas | ✅ |
+| F5 | Pagos, comprobantes, recibos | 3 semanas | ✅ |
+| F6 | Gastos y proveedores | 2 semanas | ✅ |
+| F7 | Personal, nómina, asistencia | 4 semanas | ✅ |
 | F8 | Conciliación bancaria | 3 semanas | ⏳ |
 | F9 | Actas, incidencias, quejas | 2 semanas | ⏳ |
 | F10 | Reportes y notificaciones | 3 semanas | ⏳ |
@@ -134,18 +134,18 @@ last_updated: 2026-10-12
 **Objetivo:** motor de cuotas, impuestos, multimoneda, mora.
 
 **Tareas:**
-- [ ] Configuración de cuota ordinaria (fija/variable).
-- [ ] Cuotas extraordinarias (con acta/asamblea si aplica).
-- [ ] Impuestos: exento, %, incluido/agregado.
-- [ ] Multimoneda: base + extranjera + conversión.
-- [ ] Mora: fija o porcentual.
-- [ ] Pagos parciales (opcional).
-- [ ] Generación mensual de `unit_charges`.
-- [ ] Panel de morosidad.
-- [ ] Estado de cuenta por unidad.
-- [ ] Recalculo automático al cambiar configuración.
+- [x] Configuración de cuota ordinaria (fija/variable).
+- [x] Cuotas extraordinarias (con acta/asamblea si aplica).
+- [x] Impuestos: exento, %, incluido/agregado.
+- [x] Multimoneda: base + extranjera + conversión.
+- [x] Mora: fija o porcentual.
+- [x] Pagos parciales (opcional / preparación).
+- [x] Generación mensual de `unit_charges`.
+- [x] Panel de morosidad.
+- [x] Estado de cuenta por unidad.
+- [x] Recalculo automático al cambiar configuración.
 
-**Entregable:** cada unidad tiene su estado de cuenta correcto.
+**Entregable:** cada unidad tiene su estado de cuenta correcto (Completado).
 
 **Dependencias:** F1, F2, F3.
 
@@ -156,17 +156,17 @@ last_updated: 2026-10-12
 **Objetivo:** ciclo completo de pago offline.
 
 **Tareas:**
-- [ ] Medios de pago configurables por condominio.
-- [ ] Flujo residente: seleccionar meses → subir comprobante → datos.
-- [ ] Flujo admin: aprobar/rechazar.
-- [ ] **Registro de pago por admin** (pago asistido).
-- [ ] Estado `approved_pending_data`.
-- [ ] Completar datos de pago pendientes.
-- [ ] Recibo PDF descargable.
-- [ ] Notificaciones al aprobar/rechazar.
-- [ ] Filtro "Pagos pendientes de datos" en panel admin.
+- [x] Medios de pago configurables por condominio.
+- [x] Flujo residente: seleccionar meses → subir comprobante → datos.
+- [x] Flujo admin: aprobar/rechazar.
+- [x] **Registro de pago por admin** (pago asistido).
+- [x] Estado `approved_pending_data`.
+- [x] Completar datos de pago pendientes.
+- [x] Recibo PDF descargable.
+- [x] Notificaciones al aprobar/rechazar.
+- [x] Filtro "Pagos pendientes de datos" en panel admin.
 
-**Entregable:** ciclo completo de pago offline + pago asistido.
+**Entregable:** ciclo completo de pago offline + pago asistido (Completado).
 
 **Dependencias:** F4.
 
@@ -177,14 +177,14 @@ last_updated: 2026-10-12
 **Objetivo:** controlar egresos.
 
 **Tareas:**
-- [ ] Categorías de gasto configurables.
-- [ ] Registro de gastos con comprobante.
-- [ ] Presupuesto mensual + alertas.
-- [ ] Proveedores + cuentas por pagar.
-- [ ] Pagos a proveedores.
-- [ ] Comisiones bancarias como gasto operativo.
+- [x] Categorías de gasto configurables.
+- [x] Registro de gastos con comprobante.
+- [x] Presupuesto mensual + alertas.
+- [x] Proveedores + cuentas por pagar.
+- [x] Pagos a proveedores.
+- [x] Comisiones bancarias como gasto operativo.
 
-**Entregable:** ingresos vs egresos completo.
+**Entregable:** ingresos vs egresos completo (Completado).
 
 **Dependencias:** F4.
 
@@ -195,15 +195,15 @@ last_updated: 2026-10-12
 **Objetivo:** RRHH completo del condominio.
 
 **Tareas:**
-- [ ] Trabajadores con 3 tipos de contrato.
-- [ ] Generador de contratos PDF.
-- [ ] Control de asistencia.
-- [ ] Nómina por períodos.
-- [ ] Recibos de nómina PDF.
-- [ ] Adelantos con descuento programado.
-- [ ] Documentos adjuntos.
+- [x] Trabajadores con 3 tipos de contrato.
+- [x] Generador de contratos PDF.
+- [x] Control de asistencia.
+- [x] Nómina por períodos.
+- [x] Recibos de nómina PDF.
+- [x] Adelantos con descuento programado.
+- [x] Documentos adjuntos.
 
-**Entregable:** RRHH operativo.
+**Entregable:** RRHH operativo (Completado).
 
 **Dependencias:** F1, F2.
 
@@ -329,9 +329,9 @@ Una fase se considera completa cuando:
 
 ## 🔄 Estado actual
 
-- Fases completadas: **F0 — Fundaciones**, **F1 — Identidad, tenants y multi-condominio**, **F2 — Estructura física y propiedades**, **F3 — Residentes y vinculación**.
-- Fase activa: **F4 — Cobranza**.
-- Sprint actual: Sprint 4 (F4).
-- % avance global: ~33% (F0, F1, F2 y F3 completadas).
+- Fases completadas: **F0 — Fundaciones**, **F1 — Identidad, tenants y multi-condominio**, **F2 — Estructura física y propiedades**, **F3 — Residentes y vinculación**, **F4 — Cobranza**, **F5 — Pagos, comprobantes, recibos**.
+- Fase activa: **F6 — Gastos y proveedores**.
+- Sprint actual: Sprint 6 (F6).
+- % avance global: ~50% (F0 a F5 completadas).
 
 Actualizar este bloque al inicio de cada sprint.

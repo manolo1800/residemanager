@@ -77,9 +77,11 @@ export async function fetchApi<T>(
     headers["x-condominium-id"] = condominiumId;
   }
 
-  // Normalize endpoint: ensure leading slash and avoid duplicate /v1
+  // Normalize endpoint: ensure leading slash and avoid duplicate /api/v1 or /v1
   let cleanEndpoint = endpoint.startsWith("/") ? endpoint : `/${endpoint}`;
-  if (apiBase.endsWith("/v1") && cleanEndpoint.startsWith("/v1/")) {
+  if (cleanEndpoint.startsWith("/api/v1/")) {
+    cleanEndpoint = cleanEndpoint.slice(7); // remove leading /api/v1
+  } else if (cleanEndpoint.startsWith("/v1/")) {
     cleanEndpoint = cleanEndpoint.slice(3); // remove leading /v1
   }
 

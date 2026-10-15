@@ -12,3 +12,7 @@ export * from "./parking-spot.contract";
 export * from "./person.contract";
 export * from "./ownership.contract";
 export * from "./resident-link.contract";
+export * from "./billing.contract";
+export * from "./payment.contract";
+export * from "./expense.contract";
+export * from "./staff-payroll.contract";
