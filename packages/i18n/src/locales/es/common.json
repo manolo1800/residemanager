@@ -1,0 +1,30 @@
+{
+  "app": {
+    "name": "SGC",
+    "tagline": "Sistema de Gestión de Condominios y Residencias"
+  },
+  "actions": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "confirm": "Confirmar",
+    "back": "Volver",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "refresh": "Actualizar"
+  },
+  "status": {
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "pending": "Pendiente",
+    "approved": "Aprobado",
+    "rejected": "Rechazado"
+  },
+  "feedback": {
+    "loading": "Cargando...",
+    "success": "Operación completada con éxito.",
+    "error": "Ocurrió un error inesperado.",
+    "notFound": "Elemento no encontrado."
+  }
+}
